@@ -6,8 +6,7 @@ void swap(int *xp, int *yp)
     int temp = *xp;
     *xp = *yp;
     *yp = temp;
-}
- // } Driver Code Ends
+} // } Driver Code Ends
 
 /*In tutorial, we are running the loop in ascending order, so keep picking the minimum element 
 and put it at the leftmost unsorted position. Here the loop is running in descending order, 
@@ -19,6 +18,7 @@ public:
 int select(int arr[], int i){
 int max_index= i;
 
+// You were updating 'i' here instead of 'j'.
 for(int j= i-1;j>=0;j--){
 if(arr[max_index] < arr[j]){
 max_index = j;
@@ -33,9 +33,7 @@ void selectionSort(int arr[], int n){
 // iterate till i >= 1.
 for(int i = n-1; i >= 1; i--){
 int max_index = select(arr,i);
-int temp = arr[i];
-arr[i] = arr[max_index];
-arr[max_index] = temp;
+swap(&arr[i],&arr[max_index]);
 }
 }
 
