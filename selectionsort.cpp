@@ -7,8 +7,6 @@ void swap(int *xp, int *yp)
     *xp = *yp;
     *yp = temp;
 }
-
-
  // } Driver Code Ends
 
 /*In tutorial, we are running the loop in ascending order, so keep picking the minimum element 
@@ -21,7 +19,6 @@ public:
 int select(int arr[], int i){
 int max_index= i;
 
-// You were updating 'i' here instead of 'j'.
 for(int j= i-1;j>=0;j--){
 if(arr[max_index] < arr[j]){
 max_index = j;
